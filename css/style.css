@@ -553,3 +553,47 @@ footer { background: var(--primary); color: white; padding: 60px 0 28px; }
     .proceso-grid { grid-template-columns: 1fr !important; }
     .footer-grid { grid-template-columns: 1fr !important; }
 }
+
+/* ── NAV MÓVIL FIX ── */
+@media(max-width: 768px) {
+    .nav-inner { padding: 0 16px !important; }
+    /* Ocultar items extra en móvil, solo mostrar los 3 más importantes */
+    .nav-links:not(.open) li:nth-child(1),
+    .nav-links:not(.open) li:nth-child(2) { display: none !important; }
+    /* Padding global en todas las secciones */
+    body > section, body > div { padding-left: 0 !important; padding-right: 0 !important; }
+    .container { padding: 0 16px !important; }
+}
+
+/* ── NAV MÓVIL — DEFINITIVO ── */
+@media(max-width: 900px) {
+    /* Ocultar en nav los 2 primeros links (Alojamientos y Zonas) */
+    .nav-links:not(.open) > li:first-child { display: none !important; }
+    .nav-links:not(.open) > li:nth-child(2) { display: none !important; }
+    .nav-inner { padding: 0 14px !important; gap: 8px; }
+}
+
+@media(max-width: 600px) {
+    /* Solo mostrar hamburger en móvil pequeño — ocultar TODO el nav */
+    .nav-links:not(.open) { display: none !important; }
+    .hamburger { display: block !important; }
+    /* Padding mínimo en secciones */
+    .hero { padding-left: 14px !important; padding-right: 14px !important; }
+    .page-hero { padding-left: 14px !important; padding-right: 14px !important; }
+    .prop-hero { padding-left: 14px !important; padding-right: 14px !important; }
+    .zona-hero { padding-left: 14px !important; padding-right: 14px !important; }
+    .container { padding-left: 14px !important; padding-right: 14px !important; }
+}
+
+/* ── FOOTER MÓVIL FIX ── */
+@media(max-width: 768px) {
+    footer .container { padding: 0 16px !important; }
+    .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 24px !important; }
+    .footer-brand { grid-column: 1 / -1 !important; }
+    .footer-bottom { flex-direction: column !important; align-items: flex-start !important; gap: 8px !important; }
+    .footer-col ul { gap: 8px !important; }
+}
+@media(max-width: 480px) {
+    footer .container { padding: 0 14px !important; }
+    .footer-grid { grid-template-columns: 1fr !important; }
+}
