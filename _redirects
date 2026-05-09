@@ -36,3 +36,14 @@
 
 # 404 GLOBAL — nunca un error feo
 /*                          /proximamente.html              404
+
+# ALOJAMIENTOS INDIVIDUALES
+/alojamiento/*                                           /proximamente.html    200
+
+# FICHAS ADICIONALES
+
+# 404 PERSONALIZADO
+/*    /404.html    404
+
+# FICHAS — todas van a proximamente hasta tener propietarios reales
+/alojamiento/*    /proximamente.html    200

@@ -22,6 +22,35 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+    <style>
+    /* FIX MÓVIL CRÍTICO */
+    html, body { overflow-x: hidden; max-width: 100vw; }
+    * { max-width: 100%; }
+    @media(max-width: 768px) {
+        .hero { padding: 80px 16px 32px; min-height: auto; }
+        .hero-inner { display: flex; flex-direction: column; gap: 24px; width: 100%; }
+        .hero h1 { font-size: 1.75rem; letter-spacing: -.3px; word-break: break-word; }
+        .hero p { font-size: .9rem; }
+        .hero-btns { display: flex; flex-direction: column; gap: 10px; }
+        .hero-btns a { width: 100%; justify-content: center; text-align: center; }
+        .hero-stats { gap: 16px; }
+        .search-box { width: 100%; }
+        .logo { font-size: 1rem; }
+        .logo-icon { width: 26px; height: 26px; font-size: .8rem; flex-shrink: 0; }
+        nav .logo { overflow: hidden; max-width: calc(100vw - 80px); white-space: nowrap; text-overflow: ellipsis; }
+        .hero-bg-circles { display: none; }
+        .zonas-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        .aloj-grid { grid-template-columns: 1fr !important; }
+        .section-title { font-size: 1.5rem !important; word-break: break-word; }
+        .porque-visual { display: none !important; }
+        .prop-cta-grid { grid-template-columns: 1fr !important; }
+        .footer-grid { grid-template-columns: 1fr !important; }
+        .cta-btns { flex-direction: column; align-items: stretch; }
+        .cta-btns a { text-align: center; justify-content: center; }
+        section { padding-left: 16px !important; padding-right: 16px !important; }
+        .container { padding: 0 !important; }
+    }
+    </style>
 </head>
 <body>
 
@@ -118,6 +147,7 @@
             <a href="/zona/gilet" class="zona-card"><span class="zona-emoji">⛰️</span><div class="zona-nombre">Gilet</div><div class="zona-count">Montaña · 8 aloj.</div></a>
             <a href="/zona/pucol" class="zona-card"><span class="zona-emoji">🌊</span><div class="zona-nombre">Puçol</div><div class="zona-count">Playa · 16 aloj.</div></a>
             <a href="/zona/el-puig" class="zona-card"><span class="zona-emoji">🕌</span><div class="zona-nombre">El Puig</div><div class="zona-count">Rural · 10 aloj.</div></a>
+            <a href="/zona/pobla-de-farnals" class="zona-card"><span class="zona-emoji">🏝️</span><div class="zona-nombre">Pobla de Farnals</div><div class="zona-count">Playa · 22 aloj.</div></a>
         </div>
     </div>
 </section>

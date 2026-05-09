@@ -96,3 +96,102 @@ function buscarAlojamiento() {
 // FECHA MÍNIMA HOY
 const today = new Date().toISOString().split('T')[0];
 document.querySelectorAll('input[type="date"]').forEach(d => d.setAttribute('min', today));
+
+/* ── SLIDER ── */
+function initSlider(wrap) {
+    const track = wrap.querySelector('.slider-track');
+    const slides = wrap.querySelectorAll('.slide');
+    const dots = wrap.querySelectorAll('.slider-dot');
+    const thumbs = wrap.querySelectorAll('.slider-thumb');
+    const counter = wrap.querySelector('.slider-counter');
+    if (!track || slides.length === 0) return;
+    let current = 0;
+    const total = slides.length;
+
+    function goTo(n) {
+        current = (n + total) % total;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        dots.forEach((d, i) => d.classList.toggle('active', i === current));
+        thumbs.forEach((t, i) => t.classList.toggle('active', i === current));
+        if (counter) counter.textContent = `${current + 1} / ${total}`;
+    }
+
+    wrap.querySelector('.slider-btn.prev')?.addEventListener('click', e => { e.preventDefault(); goTo(current - 1); });
+    wrap.querySelector('.slider-btn.next')?.addEventListener('click', e => { e.preventDefault(); goTo(current + 1); });
+    dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+    thumbs.forEach((t, i) => t.addEventListener('click', () => goTo(i)));
+
+    // Touch swipe
+    let startX = 0;
+    track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', e => {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+    });
+
+    goTo(0);
+}
+document.querySelectorAll('.slider-wrap').forEach(initSlider);
+
+/* ── FAVORITOS ── */
+document.querySelectorAll('.slider-fav, .aloj-fav').forEach(btn => {
+    btn.addEventListener('click', e => {
+        e.preventDefault();
+        btn.classList.toggle('active');
+        const icon = btn.querySelector('i');
+        if (icon) icon.className = btn.classList.contains('active') ? 'fas fa-heart' : 'far fa-heart';
+    });
+});
+
+/* ── GALERÍA GRID — abrir modal ── */
+document.querySelectorAll('.gallery-main, .gallery-thumb, .btn-all-photos, .gallery-more').forEach(el => {
+    el.addEventListener('click', () => {
+        const modal = document.getElementById('gallery-modal');
+        if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    });
+});
+document.getElementById('gallery-modal-close')?.addEventListener('click', () => {
+    const modal = document.getElementById('gallery-modal');
+    if (modal) { modal.style.display = 'none'; document.body.style.overflow = ''; }
+});
+
+/* ── FILTROS ALOJAMIENTOS ── */
+document.querySelectorAll('.filtro-btn[data-filter]').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.filtro-btn[data-filter]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.aloj-card').forEach(card => {
+            const zona = card.dataset.zona || '';
+            const tipo = card.dataset.tipo || '';
+            if (filter === 'all' || zona.includes(filter) || tipo.includes(filter)) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
+
+/* ── RESERVA — calcular precio ── */
+const inputEntrada = document.getElementById('reserva-entrada');
+const inputSalida = document.getElementById('reserva-salida');
+if (inputEntrada && inputSalida) {
+    function calcularPrecio() {
+        const precioNoche = parseInt(document.getElementById('precio-noche')?.dataset.precio || 0);
+        const e = new Date(inputEntrada.value);
+        const s = new Date(inputSalida.value);
+        if (!isNaN(e) && !isNaN(s) && s > e) {
+            const noches = Math.round((s - e) / (1000 * 60 * 60 * 24));
+            const subtotal = noches * precioNoche;
+            const tasas = Math.round(subtotal * 0.08);
+            const total = subtotal + tasas;
+            document.getElementById('res-noches')?.textContent && (document.getElementById('res-noches').textContent = `${noches} noches × ${precioNoche}€`);
+            document.getElementById('res-subtotal')?.textContent && (document.getElementById('res-subtotal').textContent = `${subtotal}€`);
+            document.getElementById('res-tasas')?.textContent && (document.getElementById('res-tasas').textContent = `${tasas}€`);
+            document.getElementById('res-total')?.textContent && (document.getElementById('res-total').textContent = `${total}€`);
+        }
+    }
+    inputEntrada.addEventListener('change', calcularPrecio);
+    inputSalida.addEventListener('change', calcularPrecio);
+}

@@ -2,20 +2,23 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Próximamente | vacacionessagunto.es</title>
-    <meta name="robots" content="noindex, nofollow">
+    <title>Alojamientos Vacacionales en Sagunto y Comarca 2026 | vacacionessagunto.es</title>
+    <meta name="description" content="Encuentra apartamentos, casas y villas para tus vacaciones en Sagunto, Puerto de Sagunto, Canet y toda la comarca. Trato directo con propietarios. Sin comisiones abusivas.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vacacionessagunto.es/alojamientos">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
 </head>
 <body>
+
 <nav id="navbar">
     <div class="nav-inner">
         <a href="/" class="logo"><div class="logo-icon">🌊</div>vacaciones<span>sagunto</span></a>
         <ul class="nav-links" id="navLinks">
-            <li><a href="/alojamientos">Alojamientos</a></li>
+            <li><a href="/alojamientos" style="color:var(--primary);font-weight:700">Alojamientos</a></li>
             <li><a href="/blog">Blog</a></li>
             <li><a href="/propietarios" class="nav-prop"><i class="fas fa-home"></i> Propietarios</a></li>
             <li><a href="/#buscar" class="nav-cta"><i class="fas fa-search"></i> Buscar</a></li>
@@ -23,27 +26,295 @@
         <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
     </div>
 </nav>
-<main style="min-height:80vh;display:flex;align-items:center;justify-content:center;padding:120px 30px 60px">
-    <div class="coming-soon" style="max-width:560px;width:100%">
-        <span class="big-icon">🏗️</span>
-        <h2>Nuestros alojamientos, muy pronto</h2>
-        <p>Estamos cargando todos los alojamientos disponibles en Sagunto y comarca. En breve tendrás acceso al catálogo completo con precios, fotos y disponibilidad.</p>
-        <p style="margin-bottom:28px;color:var(--text2);font-size:.88rem">Mientras tanto, puedes buscar alojamiento por WhatsApp y te ayudamos personalmente.</p>
-        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-            <a href="/#buscar" class="btn-primary"><i class="fas fa-search"></i> Buscar alojamiento</a>
-            <a href="https://wa.me/34603018190?text=Hola,%20busco%20alojamiento%20en%20Sagunto" class="btn-wa" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            <a href="/" class="btn-secondary"><i class="fas fa-home"></i> Volver al inicio</a>
+
+<!-- HERO BÚSQUEDA -->
+<section style="padding:100px 30px 40px;background:linear-gradient(135deg,#e0f2fe,#f0f9ff)">
+    <div class="container">
+        <div style="text-align:center;padding-bottom:32px">
+            <span class="section-tag">Alojamientos</span>
+            <h1 class="section-title" style="margin:0 auto 12px">Encuentra tu alojamiento<br>en Sagunto y comarca</h1>
+            <p class="section-sub" style="margin:0 auto 28px">Cuéntanos qué buscas y te encontramos el alojamiento perfecto. Trato directo con propietarios.</p>
+            <div style="background:white;border-radius:16px;padding:16px;box-shadow:var(--shadow-lg);border:1px solid var(--border);display:grid;grid-template-columns:2fr 1fr 1fr 1fr auto;gap:0;max-width:900px;margin:0 auto">
+                <div style="padding:8px 16px;border-right:1px solid var(--border)">
+                    <div style="font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text2);margin-bottom:3px">Destino</div>
+                    <select name="destino" style="border:none;outline:none;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--text);width:100%;background:transparent">
+                        <option>Toda la comarca</option>
+                        <option>Puerto de Sagunto</option><option>Canet d'en Berenguer</option>
+                        <option>Sagunto</option><option>Almenara</option><option>Pobla de Farnals</option>
+                        <option>Faura</option><option>Gilet</option><option>Puçol</option><option>El Puig</option>
+                    </select>
+                </div>
+                <div style="padding:8px 16px;border-right:1px solid var(--border)">
+                    <div style="font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text2);margin-bottom:3px">Entrada</div>
+                    <input type="date" name="entrada" style="border:none;outline:none;font-family:'DM Sans',sans-serif;font-size:.85rem;color:var(--text);width:100%;background:transparent">
+                </div>
+                <div style="padding:8px 16px;border-right:1px solid var(--border)">
+                    <div style="font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text2);margin-bottom:3px">Salida</div>
+                    <input type="date" name="salida" style="border:none;outline:none;font-family:'DM Sans',sans-serif;font-size:.85rem;color:var(--text);width:100%;background:transparent">
+                </div>
+                <div style="padding:8px 16px;border-right:1px solid var(--border)">
+                    <div style="font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text2);margin-bottom:3px">Personas</div>
+                    <select name="personas" style="border:none;outline:none;font-family:'DM Sans',sans-serif;font-size:.85rem;color:var(--text);width:100%;background:transparent">
+                        <option>1-2</option><option>3-4</option><option>5-6</option><option>+6</option>
+                    </select>
+                </div>
+                <button onclick="buscarAlojamiento()" style="background:linear-gradient(135deg,var(--accent),var(--primary2));color:white;border:none;border-radius:10px;padding:0 20px;font-weight:700;font-size:.9rem;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;margin:4px"><i class="fas fa-search"></i></button>
+            </div>
+            <p style="font-size:.75rem;color:var(--text3);margin-top:10px"><i class="fas fa-info-circle"></i> Portal en crecimiento — nuevos alojamientos cada semana. Si no encuentras lo que buscas, escríbenos y lo gestionamos personalmente.</p>
         </div>
     </div>
-</main>
+</section>
+
+<!-- AVISO HONESTO -->
+<div style="background:linear-gradient(135deg,#fef9ee,#fff7ed);border-top:3px solid var(--accent2);border-bottom:1px solid #fed7aa;padding:16px 30px">
+    <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <div style="width:40px;height:40px;background:var(--accent2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:1rem;flex-shrink:0"><i class="fas fa-rocket"></i></div>
+        <div style="flex:1">
+            <strong style="font-family:'Syne',sans-serif;font-size:.92rem;color:var(--primary)">Portal en lanzamiento — verano 2026</strong>
+            <p style="font-size:.82rem;color:var(--text2);margin-top:2px">Estamos incorporando alojamientos cada semana. Escríbenos por WhatsApp con lo que buscas y te encontramos el alojamiento perfecto aunque no esté publicado aún.</p>
+        </div>
+        <a href="https://wa.me/34603018190?text=Hola,%20busco%20alojamiento%20en%20Sagunto%20y%20necesito%20ayuda" class="btn-wa" style="font-size:.85rem;white-space:nowrap" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Pedir ayuda</a>
+    </div>
+</div>
+
+<!-- FILTROS -->
+<div class="filtros-bar">
+    <div class="filtros-inner">
+        <button class="filtro-btn active" data-filter="all"><i class="fas fa-th"></i> Todos</button>
+        <button class="filtro-btn" data-filter="playa"><i class="fas fa-umbrella-beach"></i> Playa</button>
+        <button class="filtro-btn" data-filter="rural"><i class="fas fa-tree"></i> Rural</button>
+        <button class="filtro-btn" data-filter="piscina"><i class="fas fa-swimming-pool"></i> Con piscina</button>
+        <button class="filtro-btn" data-filter="familia"><i class="fas fa-child"></i> Familias</button>
+        <span class="filtros-count">Incorporando nuevos alojamientos</span>
+    </div>
+</div>
+
+<!-- GRID -->
+<section style="padding:48px 0 80px;background:var(--bg2)">
+    <div class="container">
+
+        <div class="aloj-grid">
+
+            <!-- CARD TIPO — sin ficha real, va a WhatsApp -->
+            <div class="aloj-card" data-zona="playa puerto-de-sagunto" data-tipo="apartamento playa familia" style="cursor:pointer" onclick="consultarAlojamiento('Apartamento playa Puerto de Sagunto','Puerto de Sagunto')">
+                <div style="position:relative">
+                    <div class="slider-wrap" style="height:220px;border-radius:16px 16px 0 0">
+                        <div class="slider-track">
+                            <div class="slide"><div class="slide-placeholder playa">🏖️</div></div>
+                            <div class="slide"><div class="slide-placeholder noche">🌅</div></div>
+                            <div class="slide"><div class="slide-placeholder ciudad">🛋️</div></div>
+                        </div>
+                        <button class="slider-btn prev" onclick="event.stopPropagation()"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next" onclick="event.stopPropagation()"><i class="fas fa-chevron-right"></i></button>
+                        <div class="slider-dots"><button class="slider-dot"></button><button class="slider-dot"></button><button class="slider-dot"></button></div>
+                        <span class="slider-counter"></span>
+                        <span class="slider-badge"><span class="aloj-badge">🏖️ Playa</span></span>
+                        <button class="slider-fav aloj-fav" onclick="event.stopPropagation()"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="aloj-body">
+                    <div class="aloj-zona"><i class="fas fa-map-marker-alt"></i> Puerto de Sagunto</div>
+                    <div class="aloj-title">Apartamentos en primera línea de playa</div>
+                    <div class="aloj-features">
+                        <span class="aloj-feat"><i class="fas fa-bed"></i> 1-3 hab.</span>
+                        <span class="aloj-feat"><i class="fas fa-users"></i> 2-6 pers.</span>
+                        <span class="aloj-feat"><i class="fas fa-wifi"></i> WiFi</span>
+                        <span class="aloj-feat"><i class="fas fa-snowflake"></i> A/C</span>
+                    </div>
+                    <div class="aloj-footer">
+                        <div><div class="aloj-precio-num">Desde 70<span>€</span></div><div class="aloj-precio-label">por noche</div></div>
+                        <span class="btn-ver" style="background:var(--accent);color:white;border:none"><i class="fab fa-whatsapp"></i> Consultar</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="aloj-card" data-zona="playa canet" data-tipo="apartamento duplex piscina playa familia" style="cursor:pointer" onclick="consultarAlojamiento('Apartamento o dúplex en Canet d\\'en Berenguer','Canet d\\'en Berenguer')">
+                <div style="position:relative">
+                    <div class="slider-wrap" style="height:220px;border-radius:16px 16px 0 0">
+                        <div class="slider-track">
+                            <div class="slide"><div class="slide-placeholder playa">🏝️</div></div>
+                            <div class="slide"><div class="slide-placeholder ciudad">🌊</div></div>
+                            <div class="slide"><div class="slide-placeholder rural">🏊</div></div>
+                        </div>
+                        <button class="slider-btn prev" onclick="event.stopPropagation()"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next" onclick="event.stopPropagation()"><i class="fas fa-chevron-right"></i></button>
+                        <div class="slider-dots"><button class="slider-dot"></button><button class="slider-dot"></button><button class="slider-dot"></button></div>
+                        <span class="slider-counter"></span>
+                        <span class="slider-badge"><span class="aloj-badge aloj-badge-new">💎 Exclusivo</span></span>
+                        <button class="slider-fav aloj-fav" onclick="event.stopPropagation()"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="aloj-body">
+                    <div class="aloj-zona"><i class="fas fa-map-marker-alt"></i> Canet d'en Berenguer</div>
+                    <div class="aloj-title">Apartamentos y dúplex junto a la playa</div>
+                    <div class="aloj-features">
+                        <span class="aloj-feat"><i class="fas fa-bed"></i> 2-3 hab.</span>
+                        <span class="aloj-feat"><i class="fas fa-users"></i> 4-6 pers.</span>
+                        <span class="aloj-feat"><i class="fas fa-swimming-pool"></i> Piscina</span>
+                        <span class="aloj-feat"><i class="fas fa-car"></i> Parking</span>
+                    </div>
+                    <div class="aloj-footer">
+                        <div><div class="aloj-precio-num">Desde 80<span>€</span></div><div class="aloj-precio-label">por noche</div></div>
+                        <span class="btn-ver" style="background:var(--accent);color:white;border:none"><i class="fab fa-whatsapp"></i> Consultar</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="aloj-card" data-zona="rural gilet faura" data-tipo="casa-rural piscina rural familia" style="cursor:pointer" onclick="consultarAlojamiento('Casa rural con piscina en la comarca','Sierra Calderona o interior comarca')">
+                <div style="position:relative">
+                    <div class="slider-wrap" style="height:220px;border-radius:16px 16px 0 0">
+                        <div class="slider-track">
+                            <div class="slide"><div class="slide-placeholder rural">🌿</div></div>
+                            <div class="slide"><div class="slide-placeholder ciudad">🏡</div></div>
+                            <div class="slide"><div class="slide-placeholder playa">🏊</div></div>
+                        </div>
+                        <button class="slider-btn prev" onclick="event.stopPropagation()"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next" onclick="event.stopPropagation()"><i class="fas fa-chevron-right"></i></button>
+                        <div class="slider-dots"><button class="slider-dot"></button><button class="slider-dot"></button><button class="slider-dot"></button></div>
+                        <span class="slider-counter"></span>
+                        <span class="slider-badge"><span class="aloj-badge" style="background:var(--accent3)">🌿 Rural</span></span>
+                        <button class="slider-fav aloj-fav" onclick="event.stopPropagation()"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="aloj-body">
+                    <div class="aloj-zona"><i class="fas fa-map-marker-alt"></i> Interior comarca — Gilet, Faura</div>
+                    <div class="aloj-title">Casas rurales con piscina privada y jardín</div>
+                    <div class="aloj-features">
+                        <span class="aloj-feat"><i class="fas fa-bed"></i> 3-4 hab.</span>
+                        <span class="aloj-feat"><i class="fas fa-users"></i> 6-10 pers.</span>
+                        <span class="aloj-feat"><i class="fas fa-swimming-pool"></i> Piscina</span>
+                        <span class="aloj-feat"><i class="fas fa-fire"></i> BBQ</span>
+                    </div>
+                    <div class="aloj-footer">
+                        <div><div class="aloj-precio-num">Desde 100<span>€</span></div><div class="aloj-precio-label">por noche</div></div>
+                        <span class="btn-ver" style="background:var(--accent);color:white;border:none"><i class="fab fa-whatsapp"></i> Consultar</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="aloj-card" data-zona="playa almenara pobla-de-farnals" data-tipo="villa piscina playa familia" style="cursor:pointer" onclick="consultarAlojamiento('Villa con piscina cerca de la playa','Almenara o Pobla de Farnals')">
+                <div style="position:relative">
+                    <div class="slider-wrap" style="height:220px;border-radius:16px 16px 0 0">
+                        <div class="slider-track">
+                            <div class="slide"><div class="slide-placeholder ciudad">🌴</div></div>
+                            <div class="slide"><div class="slide-placeholder playa">🏖️</div></div>
+                            <div class="slide"><div class="slide-placeholder rural">🏊</div></div>
+                        </div>
+                        <button class="slider-btn prev" onclick="event.stopPropagation()"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next" onclick="event.stopPropagation()"><i class="fas fa-chevron-right"></i></button>
+                        <div class="slider-dots"><button class="slider-dot"></button><button class="slider-dot"></button><button class="slider-dot"></button></div>
+                        <span class="slider-counter"></span>
+                        <span class="slider-badge"><span class="aloj-badge aloj-badge-top">🌟 Top</span></span>
+                        <button class="slider-fav aloj-fav" onclick="event.stopPropagation()"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="aloj-body">
+                    <div class="aloj-zona"><i class="fas fa-map-marker-alt"></i> Almenara · Pobla de Farnals</div>
+                    <div class="aloj-title">Villas y chalets con piscina privada cerca del mar</div>
+                    <div class="aloj-features">
+                        <span class="aloj-feat"><i class="fas fa-bed"></i> 3-5 hab.</span>
+                        <span class="aloj-feat"><i class="fas fa-users"></i> 6-10 pers.</span>
+                        <span class="aloj-feat"><i class="fas fa-swimming-pool"></i> Piscina priv.</span>
+                        <span class="aloj-feat"><i class="fas fa-paw"></i> Mascotas</span>
+                    </div>
+                    <div class="aloj-footer">
+                        <div><div class="aloj-precio-num">Desde 150<span>€</span></div><div class="aloj-precio-label">por noche</div></div>
+                        <span class="btn-ver" style="background:var(--accent);color:white;border:none"><i class="fab fa-whatsapp"></i> Consultar</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="aloj-card" data-zona="playa pucol el-puig sagunto" data-tipo="apartamento playa pareja" style="cursor:pointer" onclick="consultarAlojamiento('Apartamento tranquilo cerca Valencia','Puçol, El Puig o Sagunto')">
+                <div style="position:relative">
+                    <div class="slider-wrap" style="height:220px;border-radius:16px 16px 0 0">
+                        <div class="slider-track">
+                            <div class="slide"><div class="slide-placeholder noche">🌅</div></div>
+                            <div class="slide"><div class="slide-placeholder playa">🌊</div></div>
+                        </div>
+                        <button class="slider-btn prev" onclick="event.stopPropagation()"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next" onclick="event.stopPropagation()"><i class="fas fa-chevron-right"></i></button>
+                        <div class="slider-dots"><button class="slider-dot"></button><button class="slider-dot"></button></div>
+                        <span class="slider-counter"></span>
+                        <button class="slider-fav aloj-fav" onclick="event.stopPropagation()"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="aloj-body">
+                    <div class="aloj-zona"><i class="fas fa-map-marker-alt"></i> Puçol · El Puig · Sagunto</div>
+                    <div class="aloj-title">Apartamentos tranquilos cerca de Valencia y la playa</div>
+                    <div class="aloj-features">
+                        <span class="aloj-feat"><i class="fas fa-bed"></i> 1-2 hab.</span>
+                        <span class="aloj-feat"><i class="fas fa-users"></i> 2-4 pers.</span>
+                        <span class="aloj-feat"><i class="fas fa-wifi"></i> WiFi</span>
+                        <span class="aloj-feat"><i class="fas fa-train"></i> Tren cerca</span>
+                    </div>
+                    <div class="aloj-footer">
+                        <div><div class="aloj-precio-num">Desde 55<span>€</span></div><div class="aloj-precio-label">por noche</div></div>
+                        <span class="btn-ver" style="background:var(--accent);color:white;border:none"><i class="fab fa-whatsapp"></i> Consultar</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD CTA PROPIETARIO -->
+            <div class="aloj-card" style="border:2px dashed var(--border2);background:white;cursor:pointer;align-items:center;justify-content:center;text-align:center;padding:40px 24px;min-height:380px" onclick="window.location='/propietarios'">
+                <span style="font-size:2.5rem;display:block;margin-bottom:16px">🏠</span>
+                <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;color:var(--primary);margin-bottom:10px">¿Tienes un alojamiento en la comarca?</h3>
+                <p style="font-size:.83rem;color:var(--text2);line-height:1.65;margin-bottom:20px">Publica gratis y llega a miles de viajeros. Solo pagas cuando traemos la reserva.</p>
+                <a href="/propietarios" class="btn-owner" style="display:inline-flex;font-size:.85rem" onclick="event.stopPropagation()"><i class="fas fa-plus"></i> Publicar mi propiedad</a>
+            </div>
+
+        </div>
+
+        <!-- BÚSQUEDA PERSONALIZADA -->
+        <div style="background:white;border:1px solid var(--border);border-radius:20px;padding:40px;margin-top:40px;text-align:center;box-shadow:var(--shadow)">
+            <span style="font-size:2rem;display:block;margin-bottom:14px">🔍</span>
+            <h2 style="font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--primary);margin-bottom:10px">¿No encuentras lo que buscas?</h2>
+            <p style="color:var(--text2);font-size:.9rem;max-width:500px;margin:0 auto 24px;line-height:1.75">Cuéntanos exactamente qué necesitas y te encontramos el alojamiento perfecto aunque no esté publicado todavía. Tenemos acceso a propiedades que aún no están en la web.</p>
+            <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+                <a href="https://wa.me/34603018190?text=Hola,%20busco%20alojamiento%20en%20Sagunto%20pero%20no%20encuentro%20lo%20que%20necesito.%20Busco:" class="btn-wa" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Cuéntanos qué buscas</a>
+                <a href="/propietarios" class="btn-secondary"><i class="fas fa-home"></i> ¿Tienes un alojamiento?</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ZONAS -->
+<section style="padding:60px 30px;background:white">
+    <div class="container">
+        <span class="section-tag">Por zonas</span>
+        <h2 class="section-title">Busca por destino</h2>
+        <div class="zonas-grid" style="margin-top:28px">
+            <a href="/zona/puerto-de-sagunto" class="zona-card"><span class="zona-emoji">⚓</span><div class="zona-nombre">Puerto de Sagunto</div><div class="zona-count">Playa</div></a>
+            <a href="/zona/canet" class="zona-card"><span class="zona-emoji">🏖️</span><div class="zona-nombre">Canet d'en Berenguer</div><div class="zona-count">Playa</div></a>
+            <a href="/zona/sagunto" class="zona-card"><span class="zona-emoji">🏛️</span><div class="zona-nombre">Sagunto</div><div class="zona-count">Historia</div></a>
+            <a href="/zona/almenara" class="zona-card"><span class="zona-emoji">🏰</span><div class="zona-nombre">Almenara</div><div class="zona-count">Playa</div></a>
+            <a href="/zona/pobla-de-farnals" class="zona-card"><span class="zona-emoji">🏝️</span><div class="zona-nombre">Pobla de Farnals</div><div class="zona-count">Playa</div></a>
+            <a href="/zona/faura" class="zona-card"><span class="zona-emoji">🌿</span><div class="zona-nombre">Faura</div><div class="zona-count">Rural</div></a>
+            <a href="/zona/gilet" class="zona-card"><span class="zona-emoji">⛰️</span><div class="zona-nombre">Gilet</div><div class="zona-count">Montaña</div></a>
+            <a href="/zona/pucol" class="zona-card"><span class="zona-emoji">🌊</span><div class="zona-nombre">Puçol</div><div class="zona-count">Playa</div></a>
+        </div>
+    </div>
+</section>
+
 <footer>
     <div class="container">
         <div class="footer-bottom">
-            <p>&copy; 2026 vacacionessagunto.es · <a href="/">Inicio</a> · <a href="/blog">Blog</a> · <a href="/propietarios">Propietarios</a></p>
-            <p><a href="/aviso-legal">Aviso Legal</a> · <a href="/privacidad">Privacidad</a></p>
+            <p>&copy; 2026 vacacionessagunto.es · <a href="/">Inicio</a> · <a href="/alojamientos">Alojamientos</a> · <a href="/propietarios">Propietarios</a> · <a href="/blog">Blog</a> · <a href="/aviso-legal">Aviso Legal</a> · <a href="/privacidad">Privacidad</a></p>
+            <p><a href="https://wa.me/34603018190"><i class="fab fa-whatsapp"></i> 603 018 190</a></p>
         </div>
     </div>
 </footer>
+<a href="https://wa.me/34603018190?text=Hola,%20busco%20alojamiento%20vacacional%20en%20Sagunto" class="wa-float" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
 <script src="/js/main.js" defer></script>
+<script>
+function consultarAlojamiento(tipo, zona) {
+    const msg = 'Hola 👋 me interesa:\n🏠 '+tipo+'\n📍 Zona: '+zona+'\n\n¿Tenéis disponibilidad?';
+    window.open('https://wa.me/34603018190?text='+encodeURIComponent(msg), '_blank');
+}
+</script>
 </body>
 </html>
