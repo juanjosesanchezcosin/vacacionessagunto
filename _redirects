@@ -1,0 +1,38 @@
+# PÁGINAS PRINCIPALES
+/propietarios               /propietarios.html              200
+/alojamientos               /alojamientos.html              200
+/blog                       /blog.html                      200
+/contacto                   /proximamente.html              200
+/aviso-legal                /aviso-legal.html               200
+/privacidad                 /privacidad.html                200
+/cookies                    /cookies.html                   200
+/gracias-propietario        /gracias-propietario.html       200
+/proximamente               /proximamente.html              200
+
+# ZONAS
+/zona/puerto-de-sagunto     /zona/puerto-de-sagunto.html    200
+/zona/canet                 /zona/canet.html                200
+/zona/sagunto               /zona/sagunto.html              200
+/zona/almenara              /zona/almenara.html             200
+/zona/faura                 /zona/faura.html                200
+/zona/gilet                 /zona/gilet.html                200
+/zona/pucol                 /zona/pucol.html                200
+/zona/el-puig               /zona/el-puig.html              200
+/zona/pobla-de-farnals     /zona/pobla-de-farnals.html     200
+
+# BLOG
+/blog/que-ver-sagunto                   /blog/que-ver-sagunto.html                  200
+/blog/mejores-playas-comarca-sagunto    /blog/mejores-playas-comarca-sagunto.html    200
+/blog/alquiler-vacacional-sagunto-guia  /blog/alquiler-vacacional-sagunto-guia.html  200
+/blog/restaurantes-sagunto-mejores      /blog/restaurantes-sagunto-mejores.html      200
+/blog/sagunto-con-ninos                 /blog/sagunto-con-ninos.html                 200
+/blog/fin-de-semana-sagunto             /blog/fin-de-semana-sagunto.html             200
+
+# ALOJAMIENTOS INDIVIDUALES — próximamente sin 404
+/alojamiento/*              /proximamente.html              200
+
+# ZONAS NO CREADAS — próximamente sin 404
+/zona/*                     /proximamente.html              200
+
+# 404 GLOBAL — nunca un error feo
+/*                          /proximamente.html              404
