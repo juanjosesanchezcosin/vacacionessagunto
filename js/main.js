@@ -90,7 +90,7 @@ function buscarAlojamiento() {
     const personas = document.querySelector('[name="personas"]')?.value || '2 personas';
     const precio   = document.querySelector('[name="precio"]')?.value   || 'Cualquier precio';
     const msg = `Hola 👋 busco alojamiento vacacional en Sagunto:\n📍 Destino: ${destino}\n📅 Entrada: ${entrada}\n📅 Salida: ${salida}\n👥 Personas: ${personas}\n💶 Precio: ${precio}`;
-    window.open(`https://wa.me/34603018190?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(`https://wa.me/34665327929?text=${encodeURIComponent(msg)}`, '_blank');
 }
 
 // FECHA MÍNIMA HOY
