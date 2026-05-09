@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | vacacionessagunto.es</title>
+    <meta name="description" content="Contacta con vacacionessagunto.es. Buscamos alojamiento para viajeros y publicamos propiedades de propietarios en Sagunto y comarca.">
+    <meta name="robots" content="index, follow">
+        <meta property="og:title" content="Contacto | vacacionessagunto.es">
+    <meta property="og:description" content="Contacta con nosotros para buscar alojamiento o publicar tu propiedad en Sagunto y comarca.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vacacionessagunto.es/contacto">
+    <meta property="og:image" content="https://vacacionessagunto.es/img/og-vacaciones-sagunto.jpg">
+    <meta property="og:site_name" content="vacacionessagunto.es">
+    <meta property="og:locale" content="es_ES">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contacto | vacacionessagunto.es">
+    <meta name="twitter:description" content="Contacta con nosotros para buscar alojamiento o publicar tu propiedad en Sagunto y comarca.">
+    <link rel="canonical" href="https://vacacionessagunto.es/contacto">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.svg">
+    <meta name="theme-color" content="#0c4a6e">
+</head>
+<body>
+<nav id="navbar">
+    <div class="nav-inner">
+        <a href="/" class="logo"><div class="logo-icon">🌊</div>vacaciones<span>sagunto</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="/alojamientos">Alojamientos</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/propietarios" class="nav-prop"><i class="fas fa-home"></i> Propietarios</a></li>
+            <li><a href="/#buscar" class="nav-cta"><i class="fas fa-search"></i> Buscar</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+</nav>
+
+<section class="page-hero">
+    <div class="page-hero-inner">
+        <span class="section-tag">Contacto</span>
+        <h1>¿En qué podemos ayudarte?</h1>
+        <p>Tanto si buscas alojamiento como si quieres publicar tu propiedad, estamos aquí para ayudarte.</p>
+    </div>
+</section>
+
+<section style="padding:60px 0 100px">
+    <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
+
+            <!-- FORMULARIO -->
+            <div>
+                <h2 style="font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--primary);margin-bottom:8px">Escríbenos</h2>
+                <p style="color:var(--text2);font-size:.88rem;margin-bottom:24px;line-height:1.6">Te respondemos en menos de 24 horas.</p>
+                <form name="contacto-vacaciones" method="POST" data-netlify="true" action="/gracias-contacto">
+                    <input type="hidden" name="form-name" value="contacto-vacaciones">
+                    <div class="form-row">
+                        <div class="form-group"><label>Nombre</label><input type="text" name="nombre" placeholder="Tu nombre" required></div>
+                        <div class="form-group"><label>Teléfono</label><input type="tel" name="telefono" placeholder="Tu teléfono" required></div>
+                    </div>
+                    <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="tu@email.com" required></div>
+                    <div class="form-group">
+                        <label>Motivo de contacto</label>
+                        <select name="motivo" required>
+                            <option value="">Selecciona una opción</option>
+                            <option>Busco alojamiento vacacional</option>
+                            <option>Quiero publicar mi propiedad</option>
+                            <option>Tengo una pregunta general</option>
+                            <option>Colaboración o prensa</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Mensaje</label>
+                        <textarea name="mensaje" placeholder="Cuéntanos qué necesitas..." style="min-height:120px;resize:vertical" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit" style="width:100%;background:linear-gradient(135deg,var(--accent),var(--primary2));color:white;padding:14px;border-radius:10px;font-weight:700;font-size:.95rem;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .25s">
+                        <i class="fas fa-paper-plane"></i> Enviar mensaje
+                    </button>
+                </form>
+            </div>
+
+            <!-- INFO CONTACTO -->
+            <div style="display:flex;flex-direction:column;gap:16px">
+                <div style="background:white;border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)">
+                    <h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:var(--primary);margin-bottom:20px">Canales de contacto</h3>
+                    <div style="display:flex;flex-direction:column;gap:16px">
+                        <a href="https://wa.me/34603018190" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:14px;text-decoration:none;padding:14px;background:rgba(37,211,102,.05);border:1px solid rgba(37,211,102,.2);border-radius:var(--radius-sm);transition:all .2s" onmouseover="this.style.background='rgba(37,211,102,.1)'" onmouseout="this.style.background='rgba(37,211,102,.05)'">
+                            <div style="width:42px;height:42px;background:#25d366;border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-size:1.1rem;flex-shrink:0"><i class="fab fa-whatsapp"></i></div>
+                            <div><div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.88rem;color:var(--primary)">WhatsApp</div><div style="font-size:.8rem;color:var(--text2)">603 018 190 · Respuesta inmediata</div></div>
+                        </a>
+                        <a href="mailto:info@vacacionessagunto.es" style="display:flex;align-items:center;gap:14px;text-decoration:none;padding:14px;background:rgba(14,165,233,.05);border:1px solid rgba(14,165,233,.2);border-radius:var(--radius-sm);transition:all .2s" onmouseover="this.style.background='rgba(14,165,233,.1)'" onmouseout="this.style.background='rgba(14,165,233,.05)'">
+                            <div style="width:42px;height:42px;background:var(--accent);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-size:1.1rem;flex-shrink:0"><i class="fas fa-envelope"></i></div>
+                            <div><div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.88rem;color:var(--primary)">Email</div><div style="font-size:.8rem;color:var(--text2)">info@vacacionessagunto.es</div></div>
+                        </a>
+                        <div style="display:flex;align-items:center;gap:14px;padding:14px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-sm)">
+                            <div style="width:42px;height:42px;background:var(--bg3);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:1.1rem;flex-shrink:0"><i class="fas fa-clock"></i></div>
+                            <div><div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.88rem;color:var(--primary)">Horario</div><div style="font-size:.8rem;color:var(--text2)">Lunes a Viernes 9:00 - 19:00</div></div>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:14px;padding:14px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-sm)">
+                            <div style="width:42px;height:42px;background:var(--bg3);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:1.1rem;flex-shrink:0"><i class="fas fa-map-marker-alt"></i></div>
+                            <div><div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.88rem;color:var(--primary)">Ubicación</div><div style="font-size:.8rem;color:var(--text2)">Faura, Valencia · Trabajamos en toda la comarca</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA PROPIETARIOS -->
+                <div style="background:linear-gradient(135deg,#fff7ed,#fef9ee);border:1px solid rgba(245,158,11,.2);border-radius:var(--radius);padding:24px;text-align:center">
+                    <span style="font-size:1.8rem;display:block;margin-bottom:10px">🏠</span>
+                    <h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;color:var(--primary);margin-bottom:8px">¿Tienes una propiedad?</h3>
+                    <p style="font-size:.8rem;color:var(--text2);margin-bottom:14px;line-height:1.6">Publícala gratis y empieza a recibir reservas este verano.</p>
+                    <a href="/propietarios" class="btn-owner" style="display:inline-flex;font-size:.82rem"><i class="fas fa-home"></i> Ver cómo funciona</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="/" class="logo" style="color:white;margin-bottom:14px;display:flex"><div class="logo-icon">🌊</div>vacaciones<span>sagunto</span></a>
+                <p>El portal de alquiler vacacional de referencia en Sagunto y la comarca del Camp de Morvedre.</p>
+                <span class="footer-badge" style="margin-top:12px;display:inline-flex"><i class="fas fa-check-circle"></i> Propiedades verificadas</span>
+            </div>
+            <div class="footer-col">
+                <h4>Para viajeros</h4>
+                <ul>
+                    <li><a href="/alojamientos">Todos los alojamientos</a></li>
+                    <li><a href="/zona/puerto-de-sagunto">Puerto de Sagunto</a></li>
+                    <li><a href="/zona/canet">Canet d'en Berenguer</a></li>
+                    <li><a href="/zona/sagunto">Sagunto</a></li>
+                    <li><a href="/zona/almenara">Almenara</a></li>
+                    <li><a href="/zona/pobla-de-farnals">Pobla de Farnals</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Para propietarios</h4>
+                <ul>
+                    <li><a href="/propietarios">Publicar propiedad</a></li>
+                    <li><a href="/propietarios#como-funciona">Cómo funciona</a></li>
+                    <li><a href="/propietarios#precios">Tarifas</a></li>
+                    <li><a href="/propietarios#faq">Preguntas frecuentes</a></li>
+                    <li><a href="/blog">Blog de viajes</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="https://wa.me/34603018190"><i class="fab fa-whatsapp"></i> 603 018 190</a></li>
+                    <li><a href="mailto:info@vacacionessagunto.es"><i class="fas fa-envelope"></i> info@vacacionessagunto.es</a></li>
+                    <li><a href="/contacto"><i class="fas fa-paper-plane"></i> Formulario contacto</a></li>
+                    <li><a href="/aviso-legal">Aviso Legal</a></li>
+                    <li><a href="/privacidad">Privacidad</a></li>
+                    <li><a href="/cookies">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 vacacionessagunto.es · Sagunto, Valencia · Todos los derechos reservados</p>
+            <p><a href="/aviso-legal">Aviso Legal</a> · <a href="/privacidad">Privacidad</a> · <a href="/cookies">Cookies</a></p>
+        </div>
+    </div>
+</footer>
+<a href="https://wa.me/34603018190" class="wa-float" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+<script src="/js/main.js" defer></script>
+</body>
+</html>

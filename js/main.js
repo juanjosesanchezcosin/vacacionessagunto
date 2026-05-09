@@ -195,3 +195,18 @@ if (inputEntrada && inputSalida) {
     inputEntrada.addEventListener('change', calcularPrecio);
     inputSalida.addEventListener('change', calcularPrecio);
 }
+
+/* ── BANNER COOKIES ── */
+(function() {
+    if (localStorage.getItem('cookies-ok')) return;
+    const banner = document.createElement('div');
+    banner.id = 'cookie-banner';
+    banner.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#0c4a6e;color:white;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;z-index:200;font-family:"DM Sans",sans-serif;font-size:.82rem;box-shadow:0 -4px 20px rgba(0,0,0,.15)';
+    banner.innerHTML = `
+        <span style="flex:1;min-width:200px">🍪 Usamos cookies para mejorar tu experiencia. <a href="/cookies" style="color:#7dd3fc;text-decoration:underline">Más información</a></span>
+        <div style="display:flex;gap:8px;flex-shrink:0">
+            <button onclick="document.getElementById('cookie-banner').remove();localStorage.setItem('cookies-ok','1')" style="background:#0ea5e9;color:white;border:none;padding:8px 18px;border-radius:8px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.82rem">Aceptar</button>
+            <a href="/cookies" style="background:transparent;color:white;border:1px solid rgba(255,255,255,.3);padding:8px 14px;border-radius:8px;font-size:.82rem;text-decoration:none;display:flex;align-items:center">Gestionar</a>
+        </div>`;
+    document.body.appendChild(banner);
+})();

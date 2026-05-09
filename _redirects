@@ -47,3 +47,10 @@
 
 # FICHAS — todas van a proximamente hasta tener propietarios reales
 /alojamiento/*    /proximamente.html    200
+
+# CONTACTO
+/contacto           /contacto.html          200
+/gracias-contacto   /gracias-contacto.html  200
+
+# ZONAS — fix nav
+/zonas              /alojamientos.html      301

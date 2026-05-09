@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Próximamente | vacacionessagunto.es</title>
+    <title>Página no encontrada | vacacionessagunto.es</title>
     <meta name="robots" content="noindex, nofollow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -11,31 +11,43 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
 </head>
 <body>
-<nav id="navbar">
+<nav id="navbar" class="scrolled">
     <div class="nav-inner">
         <a href="/" class="logo"><div class="logo-icon">🌊</div>vacaciones<span>sagunto</span></a>
-        <ul class="nav-links" id="navLinks">
+        <ul class="nav-links">
             <li><a href="/alojamientos">Alojamientos</a></li>
             <li><a href="/blog">Blog</a></li>
-            <li><a href="/propietarios" class="nav-prop"><i class="fas fa-home"></i> Propietarios</a></li>
             <li><a href="/#buscar" class="nav-cta"><i class="fas fa-search"></i> Buscar</a></li>
         </ul>
-        <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
     </div>
 </nav>
-<main style="min-height:80vh;display:flex;align-items:center;justify-content:center;padding:120px 30px 60px">
-    <div class="coming-soon" style="max-width:560px;width:100%">
-        <span class="big-icon">🏗️</span>
-        <h2>¡Estamos preparando algo increíble!</h2>
-        <p>Esta sección estará disponible muy pronto. Estamos trabajando para traerte los mejores alojamientos de la comarca con toda la información que necesitas.</p>
-        <p style="margin-bottom:28px;color:var(--text2);font-size:.88rem">Mientras tanto, puedes buscar alojamiento por WhatsApp y te ayudamos personalmente.</p>
-        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-            <a href="/#buscar" class="btn-primary"><i class="fas fa-search"></i> Buscar alojamiento</a>
-            <a href="https://wa.me/34603018190?text=Hola,%20busco%20alojamiento%20en%20Sagunto" class="btn-wa" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            <a href="/" class="btn-secondary"><i class="fas fa-home"></i> Volver al inicio</a>
+
+<main style="min-height:90vh;display:flex;align-items:center;justify-content:center;padding:100px 20px;background:linear-gradient(135deg,#e0f2fe,#f0f9ff)">
+    <div style="text-align:center;max-width:560px">
+        <div style="font-size:5rem;margin-bottom:16px">🌊</div>
+        <h1 style="font-family:'Syne',sans-serif;font-size:5rem;font-weight:800;color:var(--primary);line-height:1;margin-bottom:8px">404</h1>
+        <h2 style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;color:var(--primary);margin-bottom:16px">¡Vaya! Esta página se la llevó la marea</h2>
+        <p style="color:var(--text2);font-size:.95rem;line-height:1.75;margin-bottom:32px">La página que buscas no existe o ha sido movida. Pero no te preocupes, tenemos muchos alojamientos esperándote en la comarca.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:40px">
+            <a href="/" class="btn-primary"><i class="fas fa-home"></i> Ir al inicio</a>
+            <a href="/alojamientos" class="btn-secondary"><i class="fas fa-search"></i> Ver alojamientos</a>
+            <a href="https://wa.me/34603018190?text=Hola,%20necesito%20ayuda%20para%20encontrar%20alojamiento" class="btn-wa" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+        <!-- BÚSQUEDA RÁPIDA -->
+        <div style="background:white;border-radius:16px;padding:24px;box-shadow:var(--shadow-lg);border:1px solid var(--border);text-align:left">
+            <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;color:var(--primary);margin-bottom:16px;display:flex;align-items:center;gap:8px"><i class="fas fa-search" style="color:var(--accent)"></i> ¿Buscas alojamiento?</div>
+            <div class="search-field"><label>Destino</label>
+                <select name="destino">
+                    <option>Toda la comarca</option>
+                    <option>Puerto de Sagunto</option><option>Canet d'en Berenguer</option>
+                    <option>Sagunto</option><option>Almenara</option><option>Pobla de Farnals</option>
+                </select>
+            </div>
+            <button class="btn-search" onclick="buscarAlojamiento()" style="margin-top:12px"><i class="fas fa-search"></i> Buscar alojamientos</button>
         </div>
     </div>
 </main>
+
 <footer>
     <div class="container">
         <div class="footer-grid">

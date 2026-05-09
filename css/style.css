@@ -521,3 +521,35 @@ footer { background: var(--primary); color: white; padding: 60px 0 28px; }
     .slider-wrap { height: 260px; }
     .filtros-inner { gap: 8px; }
 }
+
+/* ── FIX MÓVIL DEFINITIVO — sobreescribe todo ── */
+@media(max-width: 768px) {
+    html, body { overflow-x: hidden !important; max-width: 100vw !important; }
+    * { max-width: 100% !important; }
+    .hero { padding: 80px 16px 32px !important; min-height: auto !important; overflow: hidden !important; }
+    .hero-inner { display: flex !important; flex-direction: column !important; gap: 20px !important; width: 100% !important; }
+    .hero-bg-circles { display: none !important; }
+    .hero h1 { font-size: 1.7rem !important; letter-spacing: -.3px !important; word-break: break-word !important; hyphens: auto !important; }
+    .hero-btns { flex-direction: column !important; gap: 10px !important; }
+    .hero-btns a, .hero-btns button { width: 100% !important; justify-content: center !important; }
+    .prop-hero { padding: 80px 16px 40px !important; min-height: auto !important; overflow: hidden !important; }
+    .prop-hero-inner { display: flex !important; flex-direction: column !important; gap: 20px !important; width: 100% !important; }
+    .prop-hero h1 { font-size: 1.7rem !important; letter-spacing: -.3px !important; word-break: break-word !important; hyphens: auto !important; }
+    .logo { font-size: .95rem !important; max-width: calc(100vw - 70px) !important; overflow: hidden !important; white-space: nowrap !important; }
+    .logo-icon { width: 26px !important; height: 26px !important; font-size: .75rem !important; flex-shrink: 0 !important; }
+    .section-title { font-size: 1.45rem !important; word-break: break-word !important; hyphens: auto !important; }
+    .zona-hero { padding: 80px 16px 40px !important; overflow: hidden !important; }
+    .zona-hero-inner { display: flex !important; flex-direction: column !important; gap: 20px !important; }
+    .prop-cta-grid, .porque-grid, .zonas-seo-grid, .beneficios-grid, .precios-grid { grid-template-columns: 1fr !important; }
+    .aloj-content { grid-template-columns: 1fr !important; padding: 20px 16px 60px !important; }
+    .cta-btns { flex-direction: column !important; align-items: stretch !important; }
+    .cta-btns a { justify-content: center !important; text-align: center !important; }
+    .page-hero { padding: 80px 16px 40px !important; overflow: hidden !important; }
+    .page-hero h1 { font-size: 1.6rem !important; word-break: break-word !important; }
+}
+@media(max-width: 480px) {
+    .hero h1, .prop-hero h1 { font-size: 1.4rem !important; }
+    .section-title { font-size: 1.3rem !important; }
+    .proceso-grid { grid-template-columns: 1fr !important; }
+    .footer-grid { grid-template-columns: 1fr !important; }
+}

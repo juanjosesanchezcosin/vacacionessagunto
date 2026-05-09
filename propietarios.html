@@ -5,6 +5,16 @@
     <title>Publica tu alojamiento vacacional en Sagunto | vacacionessagunto.es</title>
     <meta name="description" content="¿Tienes una casa en Sagunto o comarca? Publícala gratis y gana dinero este verano. Sin comisiones de gestión. Solo pagas cuando traemos al viajero.">
     <meta name="robots" content="index, follow">
+        <meta property="og:title" content="Publica tu propiedad vacacional en Sagunto | vacacionessagunto.es">
+    <meta property="og:description" content="Publica tu casa gratis y gana dinero este verano. Solo 8% de comisión al confirmar reserva. Sin cuotas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vacacionessagunto.es/propietarios">
+    <meta property="og:image" content="https://vacacionessagunto.es/img/og-vacaciones-sagunto.jpg">
+    <meta property="og:site_name" content="vacacionessagunto.es">
+    <meta property="og:locale" content="es_ES">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Publica tu propiedad vacacional en Sagunto | vacacionessagunto.es">
+    <meta name="twitter:description" content="Publica tu casa gratis y gana dinero este verano. Solo 8% de comisión al confirmar reserva. Sin cuotas.">
     <link rel="canonical" href="https://vacacionessagunto.es/propietarios">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuánto cuesta publicar mi propiedad?","acceptedAnswer":{"@type":"Answer","text":"Publicar tu propiedad es completamente gratuito. Solo cobramos una comisión del 8-10% cuando un viajero confirma una reserva."}},{"@type":"Question","name":"¿Necesito licencia turística?","acceptedAnswer":{"@type":"Answer","text":"Sí, en la Comunitat Valenciana es obligatorio el registro VT. Te ayudamos a tramitarlo."}},{"@type":"Question","name":"¿Cuánto puedo ganar alquilando en verano?","acceptedAnswer":{"@type":"Answer","text":"Un apartamento en Puerto de Sagunto o Canet puede generar entre 3.000 y 8.000€ en temporada alta."}}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +23,31 @@
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
     <style>
-        .prop-hero{min-height:70vh;display:flex;align-items:center;padding:140px 30px 80px;background:linear-gradient(135deg,#fff7ed,#fef9ee,#fffbeb);position:relative;overflow:hidden}
+    html,body{overflow-x:hidden;max-width:100vw}
+    @media(max-width:768px){
+        .prop-hero{padding:80px 16px 40px!important;min-height:auto!important}
+        .prop-hero-inner{display:flex!important;flex-direction:column!important;gap:24px!important;width:100%!important}
+        .prop-hero h1{font-size:1.75rem!important;letter-spacing:-.3px!important;word-break:break-word!important}
+        .prop-hero p{font-size:.9rem!important}
+        .prop-hero-inner>div:first-child>div:first-child{flex-direction:column!important;gap:10px!important}
+        .prop-hero-inner>div:first-child>div:first-child a{width:100%!important;justify-content:center!important}
+        .prop-stats{gap:12px!important;flex-wrap:wrap!important}
+        .prop-stat-num{font-size:1.4rem!important}
+        .prop-form-hero{padding:20px!important}
+        .form-row{grid-template-columns:1fr!important}
+        .pasos-grid{grid-template-columns:1fr 1fr!important}
+        .beneficios-grid{grid-template-columns:1fr!important}
+        .precios-grid{grid-template-columns:1fr!important}
+        .faq-list{max-width:100%!important}
+        section{padding-left:16px!important;padding-right:16px!important}
+        .container{padding:0!important}
+        .section-title{font-size:1.5rem!important;word-break:break-word!important}
+    }
+    @media(max-width:480px){
+        .pasos-grid{grid-template-columns:1fr!important}
+        .prop-hero h1{font-size:1.5rem!important}
+    }
+    .prop-hero{min-height:auto;display:flex;align-items:center;padding:140px 30px 80px;background:linear-gradient(135deg,#fff7ed,#fef9ee,#fffbeb);position:relative;overflow:hidden}
         .prop-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,.1),transparent 70%)}
         .prop-hero-inner{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1}
         .prop-badge{display:inline-flex;align-items:center;gap:8px;background:white;border:1px solid rgba(245,158,11,.3);color:var(--accent2);padding:7px 16px;border-radius:100px;font-size:.8rem;font-weight:600;margin-bottom:24px;box-shadow:0 2px 12px rgba(245,158,11,.15)}
@@ -53,6 +87,9 @@
         .faq-item.open .faq-q i{transform:rotate(45deg)}
         @media(max-width:768px){.prop-hero-inner{grid-template-columns:1fr}}
     </style>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.svg">
+    <meta name="theme-color" content="#0c4a6e">
 </head>
 <body>
 <nav id="navbar">
@@ -220,9 +257,38 @@
 
 <footer>
     <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="/" class="logo" style="color:white;margin-bottom:14px;display:flex"><div class="logo-icon">🌊</div>vacaciones<span style="color:rgba(14,165,233,.8)">sagunto</span></a>
+                <p>El portal de alquiler vacacional de referencia en Sagunto y la comarca del Camp de Morvedre. Trato directo, sin comisiones abusivas.</p>
+                <span class="footer-badge" style="margin-top:12px;display:inline-flex"><i class="fas fa-check-circle"></i>&nbsp;Propiedades verificadas</span>
+            </div>
+            <div class="footer-col"><h4>Para viajeros</h4><ul>
+                <li><a href="/alojamientos">Todos los alojamientos</a></li>
+                <li><a href="/zona/puerto-de-sagunto">Puerto de Sagunto</a></li>
+                <li><a href="/zona/canet">Canet d'en Berenguer</a></li>
+                <li><a href="/zona/sagunto">Sagunto</a></li>
+                <li><a href="/zona/almenara">Almenara</a></li>
+                <li><a href="/zona/pobla-de-farnals">Pobla de Farnals</a></li>
+            </ul></div>
+            <div class="footer-col"><h4>Para propietarios</h4><ul>
+                <li><a href="/propietarios">Publicar propiedad</a></li>
+                <li><a href="/propietarios#como-funciona">Cómo funciona</a></li>
+                <li><a href="/propietarios#precios">Tarifas</a></li>
+                <li><a href="/propietarios#faq">FAQ</a></li>
+            </ul></div>
+            <div class="footer-col"><h4>Contacto</h4><ul>
+                <li><a href="https://wa.me/34603018190"><i class="fab fa-whatsapp"></i>&nbsp;603 018 190</a></li>
+                <li><a href="mailto:info@vacacionessagunto.es"><i class="fas fa-envelope"></i>&nbsp;info@vacacionessagunto.es</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="/aviso-legal">Aviso Legal</a></li>
+                <li><a href="/privacidad">Privacidad</a></li>
+            </ul></div>
+        </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 vacacionessagunto.es · <a href="/">Inicio</a> · <a href="/alojamientos">Alojamientos</a> · <a href="/blog">Blog</a> · <a href="/aviso-legal">Aviso Legal</a> · <a href="/privacidad">Privacidad</a></p>
-            <p><a href="https://wa.me/34603018190"><i class="fab fa-whatsapp"></i> 603 018 190</a></p>
+            <p>&copy; 2026 vacacionessagunto.es &middot; Sagunto, Valencia</p>
+            <p><a href="/aviso-legal">Aviso Legal</a> &middot; <a href="/privacidad">Privacidad</a> &middot; <a href="/cookies">Cookies</a></p>
         </div>
     </div>
 </footer>
